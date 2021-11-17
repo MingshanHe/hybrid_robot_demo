@@ -1,0 +1,9 @@
+<launch>
+    <arg name="goal_x"                     value="-1.17"/>
+    <arg name="goal_y"                     value="-8.28"/>
+    <arg name="goal_theta"                 value="-2.8"/>
+    <param name="goal_x"                   value="$(arg goal_x)"/>
+    <param name="goal_y"                   value="$(arg goal_y)"/>
+    <param name="goal_theta"               value="$(arg goal_theta)"/>
+    <node name="set_goal" pkg="four_wheels" type="set_goal"/>
+</launch>

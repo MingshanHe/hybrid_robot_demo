@@ -1,0 +1,20 @@
+<launch>
+  <node pkg="move_base" type="move_base" respawn="true" name="move_base" output="screen" clear_params="true">
+    <rosparam file="$(find four_wheels)/config/move_base/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find four_wheels)/config/move_base/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find four_wheels)/config/move_base/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find four_wheels)/config/move_base/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find four_wheels)/config/move_base/base_global_planner_param.yaml" command="load" />
+    <rosparam file="$(find four_wheels)/config/move_base/teb_local_planner_params.yaml" command="load" />
+
+     <param name="base_global_planner" value="global_planner/GlobalPlanner"/> 
+     <param name="planner_frequency" value="1.0" />
+     <param name="planner_patience" value="3.0" />
+     <param name="aggressive_reset/reset_distance" value="0.0" />
+     <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
+     <param name="controller_frequency" value="10.0" />
+     <param name="controller_patience" value="15.0" />
+     <param name="planner_patience" value="10.0" />
+     <param name="clearing_rotation_allowed" value="false" />
+  </node>
+</launch>

@@ -1,0 +1,24 @@
+footprint: [[-0.5,-0.35],[0.5,-0.35],[0.5,0.35],[-0.5,0.35]]
+obstacle_layer:
+ enabled: true
+ max_obstacle_height: 0.8
+ min_obstacle_height: 0.0
+ obstacle_range: 3.0
+ raytrace_range: 3.5
+ combination_method: 1
+ observation_sources: laser_scan_sensor virtual_wall
+ track_unknown_space: true
+ laser_scan_sensor: {data_type: LaserScan, topic: /scan_filtered, marking: true, clearing: true, expected_update_rate: 0}
+ virtual_wall: {data_type: PointCloud, topic: /virtual_wall_cloud, marking: true, clearing: false, obstacle_range: 100000, raytrace_range: 100000}
+
+ inflation_radius: 2.50
+
+static_layer:
+  enabled:              true
+  map_topic:            "map"
+
+#sonar_layer:
+#  topics: ['/sonar_0','/sonar_1','/sonar_2','/sonar_3','/sonar_4','/sonar_5']
+#  clear_threshold: 0.2
+#  mark_threshold: 0.85
+

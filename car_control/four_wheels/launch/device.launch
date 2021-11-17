@@ -1,0 +1,6 @@
+<launch>
+
+<node name="device_car" pkg="four_wheels" type="device_driver_node" respawn="true"/>
+
+
+</launch>

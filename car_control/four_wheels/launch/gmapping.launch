@@ -1,0 +1,12 @@
+<launch>
+<node pkg="gmapping" type="slam_gmapping" name="gmapping" output="screen">
+	<param name="map_update_interval" value="2.0" />
+	<param name="delta" value="0.025" />
+	<param name="xmin" value="-20" />
+	<param name="xmax" value="20" />
+	<param name="ymin" value="-20" />
+	<param name="ymax" value="20" />
+	<param name="particles" value="50" />
+  </node>
+
+</launch>
