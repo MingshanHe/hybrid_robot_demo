@@ -1,0 +1,9 @@
+#!/usr/bin/expect
+spawn ssh root@192.168.188.99
+expect "root@192.168.188.99's password: "
+send "root\r"
+sleep 2
+send "cd /robot\r"
+send "./HYYRobotMain\r"
+
+interact

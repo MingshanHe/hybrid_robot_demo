@@ -1,0 +1,3 @@
+<launch>
+    <node name="Gripper" pkg="move_control" type="Gripper_node"/>
+</launch>

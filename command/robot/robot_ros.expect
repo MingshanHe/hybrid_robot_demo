@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+spawn ssh root@192.168.188.99
+expect "root@192.168.188.99's password: "
+send "root\r"
+sleep 2
+send "roslaunch device_driver device_driver.launch\r"
+
+interact
