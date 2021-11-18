@@ -1,8 +1,8 @@
 #!/bin/bash
-gnome-terminal -x bash -c " sh ./robot/robot_contact.sh; exec bash;"
+gnome-terminal -- bash -c "  ~/hybrid_ws/src/command/robot/robot_contact.expect; exec bash;"
 
-gnome-terminal -x bash -c " sh ./robot/robot_device.sh; exec bash;"
+gnome-terminal -- bash -c " ~/hybrid_ws/src/command/robot/robot_device.expect; exec bash;"
 
-gnome-terminal -x bash -c " sh ./robot/robot_ros.sh; exec bash;"
+gnome-terminal -- bash -c " ~/hybrid_ws/src/command/robot/robot_ros.expect; exec bash;"
 
-gnome-terminal -x bash -c " sh ./robot/robot_start_controller.sh; exec bash;"
+gnome-terminal -- bash -c " ~/hybrid_ws/src/command/robot/robot_start_controller.expect; exec bash;"
