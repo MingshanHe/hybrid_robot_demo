@@ -1,0 +1,7 @@
+<launch>
+        <include file="$(find rrt_exploration)/launch/simple.launch"/>
+        <include file="$(find four_wheels)/launch/gmapping.launch"/>
+        <include file="$(find four_wheels)/launch/move_base.launch"/>
+        <include file="$(find four_wheels)/launch/2dlaser.launch"/>
+        <node pkg="rviz" type="rviz" name="rviz"/>
+</launch>
